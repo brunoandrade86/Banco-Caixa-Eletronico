@@ -8,21 +8,21 @@
 
 char logo_banco();
 
-struct Cliente {
-    char nome[50];
-    int agencia;
-    int conta;
-    int dv;
-    int saldo;
-    char Senhas[6];
+	struct Cliente {
+    		char nome[50];
+    		int agencia;
+    		int conta;
+    		int dv;
+    		int saldo;
+    		char Senhas[6];
 };
 
 
 
 int main() {
 	
-	char voltarMenuInciail; //Variavel para repetição do sistema.
-	int menu; // Variavel que recebe a escolha do menu.
+		char voltarMenuInciail; //Variavel para repetição do sistema.
+		int menu; // Variavel que recebe a escolha do menu.
 	
 //***************************** Inicio Variáveis para Depósito **********************************	
 	char voltar;
@@ -48,21 +48,21 @@ int main() {
 	int opcao_conta_saque;
     int retorno = 0;
 	int codigo;
-    int senha;
-    int saqueConta;
-    int resto100, resto50,resto20,resto10,resto5;
-    int notaValor100, notaValor50,notaValor20,notaValor10,notaValor5;
+    		int senha;
+    		int saqueConta;
+    		int resto100, resto50,resto20,resto10,resto5;
+    		int notaValor100, notaValor50,notaValor20,notaValor10,notaValor5;
     		
 //****************************** Fim Variável para Saque *****************************************
 	
 //***************************** Inicio Variável para Emprestimo **********************************
 
 	int emprestimo = 0;
-    char retornarEscolha;
-    int totalParcela;
-    int diaDebito;
-    int escolhaParcela;
-    int valorEmprestimo;
+    		char retornarEscolha;
+    		int totalParcela;
+    		int diaDebito;
+    		int escolhaParcela;
+    		int valorEmprestimo;
 //******************************* Fim Variável para Emprestimo ************************************
 
 //***************************** Inicio Variável para Transferência *******************************	
@@ -75,13 +75,13 @@ int main() {
 
 //****************************** Inicio Variável Pagamento ****************************************	
 	int opcao_conta_pagamento;
-	char dataPamento;
-	char valor_pagamento;
-	int count = 0;
-	int tamanho = 0;
-	char boletoConsumo[48];
-    char boletoCobranca[55];
-	int confirmar_pagamento;	
+		char dataPamento;
+		char valor_pagamento;
+		int count = 0;
+		int tamanho = 0;
+		char boletoConsumo[48];
+    		char boletoCobranca[55];
+		int confirmar_pagamento;	
 
 //*************************** Fim Variável para Pagamento *******************************************	
 	
@@ -93,19 +93,19 @@ int main() {
     int i = 0;
 
     for (i=1;i<=2;i++) {
-        printf("\nNome do cliente: ");
-        scanf("%s",cliente[ i ].nome);
-        printf("\nNumero da Agência: ");
-        scanf("%d", &cliente[ i ].agencia);
-        printf("\nNumero da conta: ");
-        scanf("%d", &cliente[ i ].conta);
-        printf("\nNumero do DV: ");
-        scanf("%d", &cliente[ i ].dv);
-        printf("\nSaldo: ");
-        scanf("%d", &cliente[ i ].saldo);
-        printf("\nSenha: ");
-        scanf("%s",cliente[ i ].Senhas);
-        printf("*******************************\n");
+        	printf("\nNome do cliente: ");
+        	scanf("%s",cliente[ i ].nome);
+        	printf("\nNumero da Agência: ");
+        	scanf("%d", &cliente[ i ].agencia);
+        	printf("\nNumero da conta: ");
+        	scanf("%d", &cliente[ i ].conta);
+        	printf("\nNumero do DV: ");
+	 	scanf("%d", &cliente[ i ].dv);
+        	printf("\nSaldo: ");
+        	scanf("%d", &cliente[ i ].saldo);
+        	printf("\nSenha: ");
+        	scanf("%s",cliente[ i ].Senhas);
+        	printf("*******************************\n");
     };
 
     system("cls");
@@ -121,15 +121,15 @@ int main() {
     };
     
 	do{
-	    printf("Insira seu cartão ");
-    	scanf("%d", &codigo);
+	    	printf("Insira seu cartão ");
+    		scanf("%d", &codigo);
     	
     	system("cls");
 	
 		printf(logo_banco());
 //***************************************** Inicio Menu Principal ***************************************************		
-	    printf("   Escolha a opção desejada:\n\n");
-	    printf("          1 - Deposito                4 - Emprestimo \n");
+	    	printf("   Escolha a opção desejada:\n\n");
+	    	printf("          1 - Deposito                4 - Emprestimo \n");
 		printf("          2 - Saque                   5 - Transferência \n");
 		printf("          3 - Saldo e Extrato         6 - Pagamento \n \n \n \n   Digite sua opção: ");
 
