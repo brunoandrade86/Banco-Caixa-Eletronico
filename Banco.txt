@@ -21,10 +21,10 @@ struct Cliente {
 
 int main() {
 	
-	char voltarMenuInciail; //Variavel para repetiÁ„o do sistema.
+	char voltarMenuInciail; //Variavel para repeti√ß√£o do sistema.
 	int menu; // Variavel que recebe a escolha do menu.
 	
-//***************************** Inicio Vari·veis para DepÛsito **********************************	
+//***************************** Inicio Vari√°veis para Dep√≥sito **********************************	
 	char voltar;
 	int opcao_conta;
 	int agenciaBeneficiada;
@@ -32,19 +32,19 @@ int main() {
 	int dvBeneficiada;
 	int valor_deposito;
 	int confirmar_deposito;	
-//****************************** Fim Vari·vel para DepÛsito *************************************	
+//****************************** Fim Vari√°vel para Dep√≥sito *************************************	
 
 
 //********************************* Incio Variavel para Saldo ***********************************	
 
 	char opcao_conta_saldo;
-//******************************** Fim Valri·vel para Saldo *************************************
+//******************************** Fim Valri√°vel para Saldo *************************************
 
 
 
 
 	
-//***************************** Inicio Vari·vel para Saque **************************************
+//***************************** Inicio Vari√°vel para Saque **************************************
 	int opcao_conta_saque;
     int retorno = 0;
 	int codigo;
@@ -53,9 +53,9 @@ int main() {
     int resto100, resto50,resto20,resto10,resto5;
     int notaValor100, notaValor50,notaValor20,notaValor10,notaValor5;
     		
-//****************************** Fim Vari·vel para Saque *****************************************
+//****************************** Fim Vari√°vel para Saque *****************************************
 	
-//***************************** Inicio Vari·vel para Emprestimo **********************************
+//***************************** Inicio Vari√°vel para Emprestimo **********************************
 
 	int emprestimo = 0;
     char retornarEscolha;
@@ -63,17 +63,17 @@ int main() {
     int diaDebito;
     int escolhaParcela;
     int valorEmprestimo;
-//******************************* Fim Vari·vel para Emprestimo ************************************
+//******************************* Fim Vari√°vel para Emprestimo ************************************
 
-//***************************** Inicio Vari·vel para TransferÍncia *******************************	
+//***************************** Inicio Vari√°vel para Transfer√™ncia *******************************	
 	int transf;
 	int opcao_conta_trasferencia;
 	int valor_transferencia;
 	int confirmar_transferencia;	
 
-//****************************** Fim Vari·vel para TransferÍncia **********************************	
+//****************************** Fim Vari√°vel para Transfer√™ncia **********************************	
 
-//****************************** Inicio Vari·vel Pagamento ****************************************	
+//****************************** Inicio Vari√°vel Pagamento ****************************************	
 	int opcao_conta_pagamento;
 	char dataPamento;
 	char valor_pagamento;
@@ -83,11 +83,11 @@ int main() {
     char boletoCobranca[55];
 	int confirmar_pagamento;	
 
-//*************************** Fim Vari·vel para Pagamento *******************************************	
+//*************************** Fim Vari√°vel para Pagamento *******************************************	
 	
 	
 	
-	setlocale(LC_ALL, "Portuguese"); //funÁ„o para aceitar palavras com acentos.
+	setlocale(LC_ALL, "Portuguese"); //fun√ß√£o para aceitar palavras com acentos.
 	
 	struct Cliente cliente[5];
     int i = 0;
@@ -95,7 +95,7 @@ int main() {
     for (i=1;i<=2;i++) {
         printf("\nNome do cliente: ");
         scanf("%s",cliente[ i ].nome);
-        printf("\nNumero da AgÍncia: ");
+        printf("\nNumero da Ag√™ncia: ");
         scanf("%d", &cliente[ i ].agencia);
         printf("\nNumero da conta: ");
         scanf("%d", &cliente[ i ].conta);
@@ -121,27 +121,27 @@ int main() {
     };
     
 	do{
-	    printf("Insira seu cart„o ");
+	    printf("Insira seu cart√£o ");
     	scanf("%d", &codigo);
     	
     	system("cls");
 	
 		printf(logo_banco());
 //***************************************** Inicio Menu Principal ***************************************************		
-	    printf("   Escolha a opÁ„o desejada:\n\n");
+	    printf("   Escolha a op√ß√£o desejada:\n\n");
 	    printf("          1 - Deposito                4 - Emprestimo \n");
-		printf("          2 - Saque                   5 - TransferÍncia \n");
-		printf("          3 - Saldo e Extrato         6 - Pagamento \n \n \n \n   Digite sua opÁ„o: ");
+		printf("          2 - Saque                   5 - Transfer√™ncia \n");
+		printf("          3 - Saldo e Extrato         6 - Pagamento \n \n \n \n   Digite sua op√ß√£o: ");
 
     	scanf("%d",&menu);	
 // *************************************** Fim Menu Principal *******************************************************
 		
 		switch(menu){
 			case 1:
-// *********************** OpÁ„o 1 representa a OpÁ„o DEP”SITO - Inicio DepÛsito ************************************
+// *********************** Op√ß√£o 1 representa a Op√ß√£o DEP√ìSITO - Inicio Dep√≥sito ************************************
 
 				printf(logo_banco());		
-				printf("\n         1 - CONTA CORRENTE                2 - POUPAN«A \n \n \n \n   Digite sua opÁ„o: ");
+				printf("\n         1 - CONTA CORRENTE                2 - POUPAN√áA \n \n \n \n   Digite sua op√ß√£o: ");
 			   	scanf("%d",&opcao_conta);
 		
 				switch(opcao_conta){
@@ -150,7 +150,7 @@ int main() {
 							system("cls");
 							printf(logo_banco());
 							printf("\n \n                         CONTA CORRENTE\n\n");
-					        printf("           AgÍncia: ");
+					        printf("           Ag√™ncia: ");
 				    	    scanf("%d",&agenciaBeneficiada);
 
 						    printf("             Conta: ");	
@@ -168,14 +168,14 @@ int main() {
 							
 							printf("\n                         Insira o envelope. \n \n");
 				    
-						    printf("                            AgÍncia: %d \n", agenciaBeneficiada);
+						    printf("                            Ag√™ncia: %d \n", agenciaBeneficiada);
 					    	printf("                              Conta: %d-%d \n", cliente[contaBeneficiada].conta, dvBeneficiada);
 	   						printf("                              Valor: %d \n", valor_deposito);
 						    printf("                   Nome do  cliente: %s \n",cliente[ contaBeneficiada ].nome);
                 
                 
-						    printf("                            Confirmar depÛsito? \n \n");
-			    			printf("                        1 - Sim                2 - N„o \n");
+						    printf("                            Confirmar dep√≥sito? \n \n");
+			    			printf("                        1 - Sim                2 - N√£o \n");
 					        scanf("%d",&confirmar_deposito);
                 		
                 			system("cls");
@@ -185,10 +185,10 @@ int main() {
 			                	cliente[contaBeneficiada].saldo = cliente[contaBeneficiada].saldo+valor_deposito;
 	        		   			printf("                 Deposito confirmado com sucesso. \n\n");
 			    		    } else {
-   		            			printf("                 Deposito cancelado pelo usu·rio. \n");
+   		            			printf("                 Deposito cancelado pelo usu√°rio. \n");
    	    		        	}
    	            
-							printf("Deseja fazer outro deposito? Aperte 's' para SIM ou 'n' para N√O\n");
+							printf("Deseja fazer outro deposito? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 							scanf("%s", &voltar);
 			
     	    
@@ -199,8 +199,8 @@ int main() {
 					case 2:
 				    	do{
 							system("cls");
-							printf("\n \n                         CONTA POUPAN«A\n\n");
-					        printf("           AgÍncia: ");
+							printf("\n \n                         CONTA POUPAN√áA\n\n");
+					        printf("           Ag√™ncia: ");
 		    			    scanf("%d",&agenciaBeneficiada);
 
 				    		printf("             Conta: ");
@@ -217,7 +217,7 @@ int main() {
 		
 							printf("\n                         Insira o envelope. \n \n");
 				    
-						    printf("                            AgÍncia: %d \n", agenciaBeneficiada);
+						    printf("                            Ag√™ncia: %d \n", agenciaBeneficiada);
 		    				printf("                              Conta: %d-%d \n", contaBeneficiada, dvBeneficiada);
 	   						printf("                              Valor: %d \n", valor_deposito);
 				    		printf("                   Nome do  cliente: %s \n",cliente[ contaBeneficiada ].nome);
@@ -226,17 +226,17 @@ int main() {
 						    system("cls");
 						   	printf(logo_banco());	
                
-						    printf("                            Confirmar depÛsito? \n \n");
-    						printf("                        1 - Sim                2 - N„o \n");
+						    printf("                            Confirmar dep√≥sito? \n \n");
+    						printf("                        1 - Sim                2 - N√£o \n");
 				    	    scanf("%d",&confirmar_deposito);
                 
 	        	        	if (confirmar_deposito == 1) {
 			    	       		printf("                 Deposito confirmado com sucesso. \n\n");
 				    	    } else {
-   				        	    printf("                 Deposito cancelado pelo usu·rio. \n");
+   				        	    printf("                 Deposito cancelado pelo usu√°rio. \n");
 	   	            		}
    	            
-							printf("Deseja fazer outro deposito? Aperte 's' para SIM ou 'n' para N√O\n");
+							printf("Deseja fazer outro deposito? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 							scanf("%s", &voltar);
 			
     	    
@@ -247,24 +247,24 @@ int main() {
 
 
 					default:
-					   printf("OpÁ„o inv·lida");
+					   printf("Op√ß√£o inv√°lida");
 	   				break;
 				}				
 				
 			break;
-// ********************************** Fim OpÁ„o DepÛsito ****************************************	
+// ********************************** Fim Op√ß√£o Dep√≥sito ****************************************	
 
 
 			case 2:
-// ********************************* Incio OpÁ„o Saque ******************************************
+// ********************************* Incio Op√ß√£o Saque ******************************************
 
 			    system("cls");
 			   	printf(logo_banco());	
 
-				printf("\n         1 - CONTA CORRENTE                2 - POUPAN«A \n \n \n \n   Digite sua opÁ„o: ");
+				printf("\n         1 - CONTA CORRENTE                2 - POUPAN√áA \n \n \n \n   Digite sua op√ß√£o: ");
 			    scanf("%d",&opcao_conta_saque);
 
-			    printf("retire seu cart„o ");
+			    printf("retire seu cart√£o ");
 				scanf("%d", &codigo);
 			
 
@@ -274,7 +274,7 @@ int main() {
 							int sucesso = 0;
 				
 							if (retorno > 0){
-							    printf("insira seu cart„o ");
+							    printf("insira seu cart√£o ");
     							scanf("%d", &codigo);
 							}
     			
@@ -285,7 +285,7 @@ int main() {
 				
 							printf("Digite o valor a ser sacado: ");
 			        		scanf("%d",&saqueConta);
-// CÛdigos de saque Referenciado do site http://forum.clubedohardware.com.br/topic/880293-caixa-eletronico-em-c/ pelo usu·rio lotuss
+// C√≥digos de saque Referenciado do site http://forum.clubedohardware.com.br/topic/880293-caixa-eletronico-em-c/ pelo usu√°rio lotuss
          			
 		    			    if (saqueConta % 5 == 0 && saqueConta <= 1000) {
 			        		    notaValor100 = saqueConta / 100;
@@ -346,8 +346,8 @@ int main() {
 							} else {
 								if (saqueConta > 1000) {
 				    			printf("\n**************************************************************************\n");
-		    	    	 	    printf("\n     ATEN«√O! Seu valor excede o limite permitido no terminal eletrÙnico\n");
-    				  	   		printf("\n     POR FAVOR procure um AgÍncia mais prÛxima\n");
+		    	    	 	    printf("\n     ATEN√á√ÉO! Seu valor excede o limite permitido no terminal eletr√¥nico\n");
+    				  	   		printf("\n     POR FAVOR procure um Ag√™ncia mais pr√≥xima\n");
 								printf("\n**************************************************************************\n");
 							} else {
 								printf("\n**************************************************************************\n");
@@ -357,17 +357,17 @@ int main() {
 						}
 						
 						if (retorno == 0){
-						    printf("retire seu cart„o\n");
+						    printf("retire seu cart√£o\n");
 						}
     					retorno = retorno+1;
 
-						printf("Deseja fazer outro saque? Aperte 's' para SIM ou 'n' para N√O\n");
+						printf("Deseja fazer outro saque? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 						scanf("%s", &voltar);
 				
 						} while (voltar == 's');
 			
 						if (retorno == 0){
-							printf("retire seu cart„o\n");
+							printf("retire seu cart√£o\n");
 						}
 				
 						printf("Obrigado por usar nosso sistema \n");
@@ -382,7 +382,7 @@ int main() {
 						   	printf(logo_banco());
 				
 							if (retorno > 0){
-							    printf("insira seu cart„o ");
+							    printf("insira seu cart√£o ");
     							scanf("%d", &codigo);
 							}
     			
@@ -392,7 +392,7 @@ int main() {
 							printf("\n \n                         CONTA POUPANCA\n\n");
 				
 				
-// CÛdigos de saque Referenciado do site http://forum.clubedohardware.com.br/topic/880293-caixa-eletronico-em-c/ pelo usu·rio lotuss
+// C√≥digos de saque Referenciado do site http://forum.clubedohardware.com.br/topic/880293-caixa-eletronico-em-c/ pelo usu√°rio lotuss
 							printf("Digite o valor a ser sacado: ");
         					scanf("%d",&saqueConta);
         					
@@ -458,8 +458,8 @@ int main() {
 							} else {
 								if (saqueConta > 1000) {
 							    	printf("\n**************************************************************************\n");
- 				   	    	 	    printf("\n     ATEN«√O! Seu valor excede o limite permitido no terminal eletrÙnico\n");
-    		  				   		printf("\n     POR FAVOR procure um AgÍncia mais prÛxima\n");
+ 				   	    	 	    printf("\n     ATEN√á√ÉO! Seu valor excede o limite permitido no terminal eletr√¥nico\n");
+    		  				   		printf("\n     POR FAVOR procure um Ag√™ncia mais pr√≥xima\n");
 									printf("\n**************************************************************************\n");
 								} else {
 									printf("\n**************************************************************************\n");
@@ -469,37 +469,37 @@ int main() {
 							}
 						
 							if (retorno == 0){
-							    printf("retire seu cart„o\n");
+							    printf("retire seu cart√£o\n");
 							}
     						retorno = retorno+1;
 
-							printf("Deseja fazer outro saque? Aperte 's' para SIM ou 'n' para N√O\n");
+							printf("Deseja fazer outro saque? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 							scanf("%s", &voltar);
 				
 						} while (voltar == 's');
 			
 						if (retorno == 0){
-							printf("retire seu cart„o\n");
+							printf("retire seu cart√£o\n");
 						}
 				
 						printf("Obrigado por usar nosso sistema \n");
 		   	
 					default:
-					   printf("OpÁ„o inv·lida");
+					   printf("Op√ß√£o inv√°lida");
 				   	break;
 				}
 			break;
-// *********************************** Fim OpÁ„o Saque ****************************************************************
+// *********************************** Fim Op√ß√£o Saque ****************************************************************
 
 			case 3:
 // **************************** Inicio Parte 3 - Saldo e Extrato ******************************************************
 			    system("cls");
 				printf(logo_banco());
     
-				printf("\n         1 - SALDO                2 - EXTRATO \n \n \n \n   Digite sua opÁ„o: ");
+				printf("\n         1 - SALDO                2 - EXTRATO \n \n \n \n   Digite sua op√ß√£o: ");
 			    scanf("%d",&opcao_conta_saldo);
 
-			    printf("retire seu cart„o ");
+			    printf("retire seu cart√£o ");
 				scanf("%d", &codigo);
 			
 
@@ -510,7 +510,7 @@ int main() {
 				
 				
 							if (retorno > 0){
-							    printf("insira seu cart„o ");
+							    printf("insira seu cart√£o ");
     							scanf("%d", &codigo);
 							}
     			
@@ -550,22 +550,22 @@ int main() {
     			
 		    					printf("Total ---------------------------------------------- %d\n", cliente[codigo].saldo);
 							} else {
-								printf("\nSenha inv·lida\n");
+								printf("\nSenha inv√°lida\n");
 							}
 				
 						
 							if (retorno > 0){
-							    printf("retire seu cart„o\n");
+							    printf("retire seu cart√£o\n");
 							}
     						retorno = retorno+1;
 
-							printf("Deseja tirar um novo saldo? Aperte 's' para SIM ou 'n' para N√O\n");
+							printf("Deseja tirar um novo saldo? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 							scanf("%s", &voltar);
 				
 						} while (voltar == 's');
 			
 						if (retorno > 0){
-							printf("retire seu cart„o\n");
+							printf("retire seu cart√£o\n");
 						}
 				
 						printf("Obrigado por usar nosso sistema \n");
@@ -578,7 +578,7 @@ int main() {
 				
 				
 							if (retorno > 0){
-							    printf("insira seu cart„o ");
+							    printf("insira seu cart√£o ");
 			    				scanf("%d", &codigo);
 							}
     			
@@ -617,34 +617,34 @@ int main() {
     					
 			    				printf("Compra Mac Donalds     --------------------------------------------- R$  43,15\n");
     							printf("Posto de gasolina      --------------------------------------------- R$ 143,00\n");
-    							printf("Saque caixa eletrÙnico --------------------------------------------- R$ 400,00\n");
+    							printf("Saque caixa eletr√¥nico --------------------------------------------- R$ 400,00\n");
     							printf("Pagamento Faculdade    --------------------------------------------- R$ 605,02\n");
     					
 								printf("total ----------------------------------------------%d\n", cliente[codigo].saldo);
 							} else {
-								printf("\nSenha inv·lida\n");
+								printf("\nSenha inv√°lida\n");
 							}
 				
 						
 							if (retorno > 0){
-							    printf("retire seu cart„o\n");
+							    printf("retire seu cart√£o\n");
 							}
 			    			retorno = retorno+1;
 
-							printf("Deseja tirar um novo saldo? Aperte 's' para SIM ou 'n' para N√O\n");
+							printf("Deseja tirar um novo saldo? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 							scanf("%s", &voltar);
 				
 						} while (voltar == 's');
 			
 						if (retorno > 0){
-							printf("retire seu cart„o\n");
+							printf("retire seu cart√£o\n");
 						}
 				
 						printf("Obrigado por usar nosso sistema \n");
 					break;
 			
 					default:
-					   printf("OpÁ„o inv·lida");
+					   printf("Op√ß√£o inv√°lida");
 				   	break;
 				}
 			break;
@@ -654,7 +654,7 @@ int main() {
 			    system("cls");
 			   	printf(logo_banco());
     
-			    printf("retire seu cart„o ");
+			    printf("retire seu cart√£o ");
 				scanf("%d", &codigo);
 			
 
@@ -662,7 +662,7 @@ int main() {
 					int sucesso = 0;
 			
 					if (retorno > 0){
-					    printf("insira seu cart„o ");
+					    printf("insira seu cart√£o ");
 						scanf("%d", &codigo);
 					}
     			
@@ -671,7 +671,7 @@ int main() {
 						system("cls");
 						printf(logo_banco());
 						
-						printf(" Digite o valor do emprÈstimo ");
+						printf(" Digite o valor do empr√©stimo ");
 						scanf("%d", &valorEmprestimo);
 						printf(" Digite o dia de debito da parcela em sua conta ");
 						scanf("%d", &diaDebito);
@@ -691,102 +691,102 @@ int main() {
 			
 						switch(escolhaParcela){
 							case 1:
-								printf("Valor do seu emprestimo È de %d\n", &valorEmprestimo);
-								printf("Debitado no dia %d do prÛximo mÍs\n", &diaDebito);
+								printf("Valor do seu emprestimo √© de %d\n", &valorEmprestimo);
+								printf("Debitado no dia %d do pr√≥ximo m√™s\n", &diaDebito);
 							break;
 							case 2:
 								totalParcela = valorEmprestimo/2;
 								totalParcela = totalParcela+totalParcela*0.1;
 								printf("total das parcelas: 2 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 3:
 								totalParcela = valorEmprestimo/3;
 								totalParcela = totalParcela+totalParcela*0.15;
 								printf("total das parcelas: 3 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 4:
 								totalParcela = valorEmprestimo/4;
 								totalParcela = totalParcela+totalParcela*0.2;
 								printf("total das parcelas: 4 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 5:
 								totalParcela = valorEmprestimo/5;
 								totalParcela = totalParcela+totalParcela*0.25;
 								printf("total das parcelas: 5 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 6:
 								totalParcela = valorEmprestimo/6;
 								totalParcela = totalParcela+totalParcela*0.3;
 								printf("total das parcelas: 6 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 7:
 								totalParcela = valorEmprestimo/7;
 								totalParcela = totalParcela+totalParcela*0.35;
 								printf("total das parcelas: 7 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 8:
 								totalParcela = valorEmprestimo/8;
 								totalParcela = totalParcela+totalParcela*0.4;
 								printf("total das parcelas: 8 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 9:
 								totalParcela = valorEmprestimo/9;
 								totalParcela = totalParcela+totalParcela*0.45;
 								printf("total das parcelas: 9 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 10:
 								totalParcela = valorEmprestimo/10;
 								totalParcela = totalParcela+totalParcela*0.5;
 								printf("total das parcelas: 10 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 11:
 								totalParcela = valorEmprestimo/11;
 								totalParcela = totalParcela+totalParcela*0.55;
 								printf("total das parcelas: 11 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 12:
 								totalParcela = valorEmprestimo/12;
 								totalParcela = totalParcela+totalParcela*0.6;
 								printf("total das parcelas: 12 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;	
 							case 13:
 								totalParcela = valorEmprestimo/13;
 								totalParcela = totalParcela+totalParcela*0.65;
 								printf("total das parcelas: 13 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 14:
 								totalParcela = valorEmprestimo/14;
 								totalParcela = totalParcela+totalParcela*0.7;
 								printf("total das parcelas: 14 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 15:
 								totalParcela = valorEmprestimo/15;
 								totalParcela = totalParcela+totalParcela*0.8;
 								printf("total das parcelas: 15 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 							case 16:
 								totalParcela = valorEmprestimo/24;
 								totalParcela = totalParcela+totalParcela*0.9;
 								printf("total das parcelas: 24 vezes \n");
-								printf("O valor de cada parcela È de R$ %d\n", totalParcela);
+								printf("O valor de cada parcela √© de R$ %d\n", totalParcela);
 							break;
 				
 							default:
-								printf("OpÁ„o inv·lida");
+								printf("Op√ß√£o inv√°lida");
 							break;
 						}
 						printf("Aperte S para continuar com o emprestimo ou N para escolher outra parcela\n");
@@ -827,25 +827,25 @@ int main() {
 	    			
 				    		printf("Total ----------------------------------------------%d\n", cliente[codigo].saldo);
 						} else {
-					        printf("\n		ATEN«√O!!!\n VocÍ j· possui um emprÈstimo em vigor, mais informaÁ„o procure sua AgÍncia.\n");
+					        printf("\n		ATEN√á√ÉO!!!\n Voc√™ j√° possui um empr√©stimo em vigor, mais informa√ß√£o procure sua Ag√™ncia.\n");
 						}		
 					} else {
-						printf("\nSenha inv·lida\n");
+						printf("\nSenha inv√°lida\n");
 					}
 					
 						
 					if (retorno > 0){
-					    printf("retire seu cart„o\n");
+					    printf("retire seu cart√£o\n");
 					}
  				   	retorno = retorno+1;
 	
-					printf("Deseja realizar um novo emprÈstimo? Aperte 's' para SIM ou 'n' para N√O\n");
+					printf("Deseja realizar um novo empr√©stimo? Aperte 's' para SIM ou 'n' para N√ÉO\n");
 					scanf("%s", &voltar);
 				
 				} while (voltar == 's');
 				
 				if (retorno > 0){
-					printf("retire seu cart„o\n");
+					printf("retire seu cart√£o\n");
 				} 
 				
 				printf("Obrigado por usar nosso sistema \n");
@@ -855,14 +855,14 @@ int main() {
 
 
 			case 5:
-// **************************** Inicio parte 5 TransferÍncia ***************************************************
+// **************************** Inicio parte 5 Transfer√™ncia ***************************************************
             	system("cls");
 				printf(logo_banco());
                 
-				printf("retire seu cart„o ");
+				printf("retire seu cart√£o ");
             	scanf("%d", &codigo);
             			
-            	printf("\n         1 - CONTA CORRENTE                2 - POUPAN«A \n \n \n \n   Digite sua opÁ„o: ");
+            	printf("\n         1 - CONTA CORRENTE                2 - POUPAN√áA \n \n \n \n   Digite sua op√ß√£o: ");
                	scanf("%d",&opcao_conta_trasferencia);
             		
             	switch(opcao_conta_trasferencia){
@@ -873,7 +873,7 @@ int main() {
             				system("cls");
 						   	printf(logo_banco());
             				printf("\n \n                         CONTA CORRENTE\n\n");
-            		        printf("           AgÍncia: ");
+            		        printf("           Ag√™ncia: ");
             		        scanf("%d",&agenciaBeneficiada);
             
             			    printf("             Conta: ");
@@ -890,7 +890,7 @@ int main() {
             		
             				printf("\n                         Insira o envelope. \n \n");
             				    
-            			    printf("                            AgÍncia: %d \n", agenciaBeneficiada);
+            			    printf("                            Ag√™ncia: %d \n", agenciaBeneficiada);
             		    	printf("                              Conta: %d-%d \n", contaBeneficiada, dvBeneficiada);
             	   			printf("                              Valor: %d \n", valor_transferencia);
             			    printf("                   Nome do  cliente: %s \n",cliente[ contaBeneficiada ].nome);
@@ -923,24 +923,24 @@ int main() {
                             if(sucesso == 4) {
                   	            if (cliente[codigo].saldo > valor_transferencia) {
             				    	printf("\n   		 Confirmar transferir? \n \n");
-                					printf("                        1 - Sim                2 - N„o \n");
+                					printf("                        1 - Sim                2 - N√£o \n");
             		    		    scanf("%d",&confirmar_transferencia);
             
             	                	if (confirmar_transferencia == 1) {
-            		           			printf("                 TransferÍncia confirmado com sucesso. \n\n");
+            		           			printf("                 Transfer√™ncia confirmado com sucesso. \n\n");
             	    	            	cliente[codigo].saldo = cliente[codigo].saldo - valor_transferencia;
             	    	            	cliente[contaBeneficiada].saldo = cliente[contaBeneficiada].saldo + valor_transferencia;
                         	    	} else {
-                            			printf("\n TransferÍncia cancelada pelo usu·rio.");
+                            			printf("\n Transfer√™ncia cancelada pelo usu√°rio.");
                             		}
             		      	  	} else {
-               		        	    printf(" \n           VocÍ n„o possui saldo Suficiente. \n");
+               		        	    printf(" \n           Voc√™ n√£o possui saldo Suficiente. \n");
                	           	  	}
                	           	} else {
-               	           		printf("\nATEN«√O!!! Senha inv·lida.");
+               	           		printf("\nATEN√á√ÉO!!! Senha inv√°lida.");
                	           	}
                	            
-            				printf("\nDeseja fazer outra transferÍncia? Aperte 's' para SIM ou 'n' para N√O\n");
+            				printf("\nDeseja fazer outra transfer√™ncia? Aperte 's' para SIM ou 'n' para N√ÉO\n");
             				scanf("%s", &voltar);
             			
                 	    
@@ -959,7 +959,7 @@ int main() {
 						   	printf(logo_banco());
             				printf("\n \n                         CONTA POUPANCA\n\n");
            		        	
-							printf("           AgÍncia: ");
+							printf("           Ag√™ncia: ");
             		        scanf("%d",&agenciaBeneficiada);
             
             			    printf("             Conta: ");
@@ -976,7 +976,7 @@ int main() {
             		
             				printf("\n                         Insira o envelope. \n \n");
             				    
-            			    printf("                            AgÍncia: %d \n", agenciaBeneficiada);
+            			    printf("                            Ag√™ncia: %d \n", agenciaBeneficiada);
             		    	printf("                              Conta: %d-%d \n", contaBeneficiada, dvBeneficiada);
             	   			printf("                              Valor: %d \n", valor_transferencia);
             			    printf("                   Nome do  cliente: %s \n",cliente[ contaBeneficiada ].nome);
@@ -1006,24 +1006,24 @@ int main() {
                             if(sucesso == 4) {
                   	            if (cliente[codigo].saldo > valor_transferencia) {
             				    	printf("\n   		 Confirmar transferir? \n \n");
-                					printf("                        1 - Sim                2 - N„o \n");
+                					printf("                        1 - Sim                2 - N√£o \n");
             		    		    scanf("%d",&confirmar_transferencia);
             
             	                	if (confirmar_transferencia == 1) {
-            		           			printf("                 TransferÍncia confirmado com sucesso. \n\n");
+            		           			printf("                 Transfer√™ncia confirmado com sucesso. \n\n");
             	    	            	cliente[codigo].saldo = cliente[codigo].saldo - valor_transferencia;
             	    	            	cliente[contaBeneficiada].saldo = cliente[contaBeneficiada].saldo + valor_transferencia;
                         	    	} else {
-                            			printf("\n TransferÍncia cancelada pelo usu·rio.");
+                            			printf("\n Transfer√™ncia cancelada pelo usu√°rio.");
                             		}
             	          	  	} else {
-               		        	    printf(" \n           VocÍ n„o possui saldo Suficiente. \n");
+               		        	    printf(" \n           Voc√™ n√£o possui saldo Suficiente. \n");
                	           	  	}
                	           	} else {
-               	           		printf("\nATEN«√O!!! Senha inv·lida.");
+               	           		printf("\nATEN√á√ÉO!!! Senha inv√°lida.");
                	           	}
                	            
-            				printf("\nDeseja fazer outra transferÍncia? Aperte 's' para SIM ou 'n' para N√O\n");
+            				printf("\nDeseja fazer outra transfer√™ncia? Aperte 's' para SIM ou 'n' para N√ÉO\n");
             				scanf("%s", &voltar);
             			
                 	    
@@ -1032,10 +1032,199 @@ int main() {
 						printf("\nObrigado por usar nosso sistema\n");
 						
 					default:
-						printf("OpÁ„o inv·lida");
+						printf("Op√ß√£o inv√°lida");
             		break;
             	}
             break;
             
 			case 6:
-/}
+//********************************************Inicio da 6 etapa - Pagamento *********************************************************
+            	
+            	system("cls");
+			   	printf(logo_banco());
+
+                printf("retire seu cart√£o ");
+            	scanf("%d", &codigo);
+            			
+            	printf("\n         1 - CONTA DE CONSUMO                2 - BOLETO DE COBRAN√áA \n \n \n \n   Digite sua op√ß√£o: ");
+               	scanf("%d",&opcao_conta_pagamento);
+            		
+            	switch(opcao_conta_pagamento){
+            		case 1:
+            			do{
+            				int sucesso = 0;
+            				
+            				system("cls");
+						   	printf(logo_banco());
+						   	
+            				printf("\n \n          Digite o c√≥digo de barra ou use o leitor.\n");
+            		        scanf("%s", boletoConsumo);
+            
+            
+            			    tamanho	= strlen(boletoConsumo);
+            
+            				for (count=0; count<tamanho; count++) {
+            					
+            					if (count == 12 || count == 13 || count == 14 || count == 15) {
+            						printf("%c", boletoConsumo[count]);
+            						if (count == 13) {
+            							printf(",");
+            						}
+            					}
+            				}
+            				
+            				printf("\nData do pagamento: ");
+            				scanf("%s", &dataPamento);
+            				
+            				system("cls");
+						   	printf(logo_banco());
+                            
+                            int countSenha = 0;
+             				printf ("\n Digite a senha de 4 digitos: "); 
+                    		char string[4]; 
+            				string[0] = getch(); 
+            				printf ("*"); 
+            				string[1] = getch(); 
+            				printf ("*"); 
+            				string[2] = getch(); 
+            				printf ("*"); 
+            				string[3] = getch(); 
+            				printf ("*"); 
+            					
+            					
+            
+            		
+            				for (countSenha = 0; countSenha<4; countSenha++) {
+            					if(string[countSenha] == cliente[codigo].Senhas[countSenha]){
+            						sucesso = sucesso+1;
+            					}
+            				}
+                            
+                            if(sucesso == 4) {
+                  	            if (cliente[codigo].saldo > valor_pagamento) {
+            				    	printf("\n   		 Confirmar pagamento? \n \n");
+                					printf("                        1 - Sim                2 - N√£o \n");
+            		    		    scanf("%d",&confirmar_pagamento);
+            
+            	                	if (confirmar_pagamento == 1) {
+            		           			printf("                  Pagamento ser√° efetivado apartir das 22hs. \n");
+            		           			printf("                  Se n√£o houver saldo, o pagamento ser√° cancelado.");
+            	    	            	cliente[codigo].saldo = cliente[codigo].saldo - valor_pagamento;
+                        	    	} else {
+                            			printf("\n Pagamento cancelada pelo usu√°rio.");
+                            		}
+            		      	  	} else {
+               		        	    printf(" \n           Voc√™ n√£o possui saldo Suficiente. \n");
+               	           	  	}
+               	           	} else {
+               	           		printf("\nATEN√á√ÉO!!! Senha inv√°lida.");
+               	           	}
+               	            
+            				printf("\n         Deseja fazer outra pagamento? Aperte 's' para SIM ou 'n' para N√ÉO\n");
+            				scanf("%s", &voltar);
+            			
+                	    
+            			} while(voltar == 's');
+            				printf("\nObrigado por usar nosso sistema\n");
+            		
+            		break; 
+            		
+            		case 2:
+            			do{
+            				int sucesso = 0;
+            				
+            				system("cls");
+						   	printf(logo_banco());
+						   	
+            				printf("\n \n          Digite o c√≥digo de barra ou use o leitor.\n");
+            		        scanf("%s", boletoCobranca);
+            
+            
+            			    tamanho	= strlen(boletoCobranca);
+            
+            				for (count=0; count<tamanho; count++) {
+            					
+            					if (count == 42 || count == 43 || count == 44 || count == 45 || count == 46) {
+            						printf("%c", boletoCobranca[count]);
+            						if (count == 44) {
+            							printf(",");
+            						}
+            					}
+            				}
+            				
+            				printf("\nData do pagamento: ");
+            				scanf("%s", &dataPamento);
+            				
+            				system("cls");
+						   	printf(logo_banco());
+                            
+                            int countSenha = 0;
+             				printf ("\n Digite a senha de 4 digitos: "); 
+                    		char string[4]; 
+            				string[0] = getch(); 
+            				printf ("*"); 
+            				string[1] = getch(); 
+            				printf ("*"); 
+            				string[2] = getch(); 
+            				printf ("*"); 
+            				string[3] = getch(); 
+            				printf ("*"); 
+            					
+            					
+            
+            		
+            				for (countSenha = 0; countSenha<4; countSenha++) {
+            					if(string[countSenha] == cliente[codigo].Senhas[countSenha]){
+            						sucesso = sucesso+1;
+            					}
+            				}
+                            
+                            if(sucesso == 4) {
+                  	            if (cliente[codigo].saldo > valor_pagamento) {
+            				    	printf("\n   		 Confirmar pagamento? \n \n");
+                					printf("                        1 - Sim                2 - N√£o \n");
+            		    		    scanf("%d",&confirmar_pagamento);
+            
+            	                	if (confirmar_pagamento == 1) {
+            		           			printf("                  Pagamento ser√° efetivado apartir das 22hs. \n");
+            		           			printf("                  Se n√£o houver saldo, o pagamento ser√° cancelado.");
+            	    	            	cliente[codigo].saldo = cliente[codigo].saldo - valor_pagamento;
+                        	    	} else {
+                            			printf("\n Pagamento cancelada pelo usu√°rio.");
+                            		}
+            		      	  	} else {
+               		        	    printf(" \n           Voc√™ n√£o possui saldo Suficiente. \n");
+               	           	  	}
+               	           	} else {
+               	           		printf("\nATEN√á√ÉO!!! Senha inv√°lida.");
+               	           	}
+               	            
+            				printf("\n         Deseja fazer outra pagamento? Aperte 's' para SIM ou 'n' para N√ÉO\n");
+            				scanf("%s", &voltar);
+            			
+                	    
+            			} while(voltar == 's');
+            				printf("\nObrigado por usar nosso sistema\n");
+            		break;
+            		
+            		default:
+            			printf("Op√ß√£o inv√°lida");
+            		break;   	
+            	}	
+            break;
+            
+//******************************************* Fim etapa Pagamento *******************************************
+            default: 
+            	printf("\nATEN√á√ÉO!!!Op√ß√£o inv√°lida\n");
+            break;
+		}		
+		
+		printf("Deseja voltar ao menu inicial? S para SIM ou N para N√ÉO. ");
+		scanf("%s", &voltarMenuInciail);
+
+	} while (voltarMenuInciail == 's');
+
+	
+}
+
+
